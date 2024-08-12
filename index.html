@@ -5,32 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
-    <script>
-        document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-        function ctrlShiftKey(e, keyCode) {
-            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-        }
-
-        document.onkeydown = (e) => {
-            if (
-                event.keyCode === 123 ||
-                ctrlShiftKey(e, 'I') ||
-                ctrlShiftKey(e, 'J') ||
-                ctrlShiftKey(e, 'C') ||
-                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-            )
-                return false;
-        };
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-    <script src="https://gijsroge.github.io/owl-carousel2-thumbs/assets/OwlCarousel2Thumbs.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body oncopy="return false" oncut="return false" onpaste="return false">
+<body>
     <div class="slider-start">
         <div class="rounded-gradient-borders"></div>
         <div class="owl-carousel owl-theme">
@@ -227,22 +205,7 @@
             </div>
         </div>
     </div>
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            dots: true,
-            nav: true,
-            items: 1,
-            mouseDrag: false,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            thumbs: true,
-            thumbImage: true,
-            thumbContainerClass: 'owl-thumbs',
-            thumbItemClass: 'owl-thumb-item'
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
